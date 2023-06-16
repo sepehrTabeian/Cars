@@ -40,8 +40,6 @@ extension CarRepository : CarRepositoryProtocol {
         dic["currentPage"] = page
         dic["take"] = take
         dic["sort"] = "createdAt,DESC"
-        
-        
         return dic
     }
 }
