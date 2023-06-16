@@ -17,66 +17,28 @@ struct CarsView: View {
         NavigationView{
             ScrollView{
                 
-                
                 if viewModel.isLoading  {
-                    ProgressView()
-                        .progressViewStyle(CircularProgressViewStyle(tint: Color.blue))
-                        .accentColor(Color.white)
-                        .frame(height:UIScreen.main.bounds.height,alignment: .center)
+                    progressView
+                    
                 }else {
                     if ((viewModel.carList?.cars.isEmpty) != nil)  {
-                        VStack(alignment: .center, spacing: 30) {
-                            Image(systemName: "tray")
-                            Text("There are any Cars")
-                                .font(.body)
-                        }
-                        .frame(width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height, alignment: .center)
                         
+                        emptyCars
                     }
                     else if !viewModel.errorTitle.isEmpty{
-                        VStack(alignment: .center, spacing: 30) {
-                            Image(systemName: "arrow.counterclockwise.icloud.fill")
-                            Text(viewModel.errorTitle)
-                                .font(.body)
-                        }
-                        .frame(width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height, alignment: .center)
+                    
+                        errorView
                         
                     }
                     else {
-                        
-                        
-                        // ScrollView content
-                        LazyVStack{
-                            ForEach(viewModel.carList?.cars ?? [] , id: \.id){
-                                car in
-                                
-                                VStack{
-                                    Text("make : \(car.make)")
-                                    Text("model : \(car.model)")
-                                    
-                                }
-                                
-                            }
-                            
-                        }
-                        .listStyle(.plain)
-                        .background(Color.theme.backgroundColor)
-                        .padding(.bottom)
-                        .listStyle(.plain)
-                        
-                        
+                        Cars
+
                     }
-                    
-                    
-                    
-                    
+            
                 }
                 
             }
-            
-            
-            
-            
+      
             .navigationTitle("Cars")
             
             
@@ -85,6 +47,39 @@ struct CarsView: View {
         
     }
     
+}
+extension CarsView {
+    var progressView : some View {
+        ProgressView()
+            .progressViewStyle(CircularProgressViewStyle(tint: Color.blue))
+            .accentColor(Color.white)
+            .frame(height:UIScreen.main.bounds.height,alignment: .center)
+    }
+    var emptyCars : some View {
+        VStack(alignment: .center, spacing: 30) {
+            Image(systemName: "tray")
+            Text("There are any Cars")
+                .font(.body)
+        }
+        .frame(width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height, alignment: .center)
+    }
+    var errorView : some View {
+        VStack(alignment: .center, spacing: 30) {
+            Image(systemName: "arrow.counterclockwise.icloud.fill")
+            Text(viewModel.errorTitle)
+                .font(.body)
+        }
+        .frame(width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height, alignment: .center)
+    }
+    var Cars : some View {
+        LazyVStack{
+            ForEach(viewModel.carList?.cars ?? [] , id: \.id){
+                car in
+                CarsItemView(car: car)
+            }
+            
+        }
+    }
 }
 
 struct CarsView_Previews: PreviewProvider {
