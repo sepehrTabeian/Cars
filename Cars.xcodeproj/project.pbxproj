@@ -19,6 +19,8 @@
 		FE11F07B2A3C7AD300A61B62 /* MechanicalEngineDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11F07A2A3C7AD300A61B62 /* MechanicalEngineDto.swift */; };
 		FE11F07D2A3C7AEE00A61B62 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11F07C2A3C7AEE00A61B62 /* Engine.swift */; };
 		FE11F07F2A3C7B2C00A61B62 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11F07E2A3C7B2C00A61B62 /* Pagination.swift */; };
+		FE11F0812A3C83B200A61B62 /* CarsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11F0802A3C83B200A61B62 /* CarsRepository.swift */; };
+		FE11F0832A3C845E00A61B62 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11F0822A3C845E00A61B62 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		FE11F07A2A3C7AD300A61B62 /* MechanicalEngineDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MechanicalEngineDto.swift; sourceTree = "<group>"; };
 		FE11F07C2A3C7AEE00A61B62 /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		FE11F07E2A3C7B2C00A61B62 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		FE11F0802A3C83B200A61B62 /* CarsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsRepository.swift; sourceTree = "<group>"; };
+		FE11F0822A3C845E00A61B62 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				FE11F0732A3C79B500A61B62 /* Models */,
+				FE11F0802A3C83B200A61B62 /* CarsRepository.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 				FE11F07A2A3C7AD300A61B62 /* MechanicalEngineDto.swift */,
 				FE11F07C2A3C7AEE00A61B62 /* Engine.swift */,
 				FE11F07E2A3C7B2C00A61B62 /* Pagination.swift */,
+				FE11F0822A3C845E00A61B62 /* NetworkError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -212,10 +218,12 @@
 				FE11F0772A3C7A2800A61B62 /* Car.swift in Sources */,
 				FE11F0722A3C782000A61B62 /* Color.swift in Sources */,
 				FE11F0792A3C7A5500A61B62 /* ElectricalEngineDto.swift in Sources */,
+				FE11F0812A3C83B200A61B62 /* CarsRepository.swift in Sources */,
 				FE11F05C2A3BB17F00A61B62 /* ContentView.swift in Sources */,
 				FE11F07B2A3C7AD300A61B62 /* MechanicalEngineDto.swift in Sources */,
 				FE11F07F2A3C7B2C00A61B62 /* Pagination.swift in Sources */,
 				FE11F07D2A3C7AEE00A61B62 /* Engine.swift in Sources */,
+				FE11F0832A3C845E00A61B62 /* NetworkError.swift in Sources */,
 				FE11F05A2A3BB17F00A61B62 /* CarsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
