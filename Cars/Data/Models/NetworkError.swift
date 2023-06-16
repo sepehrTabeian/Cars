@@ -8,7 +8,7 @@
 import Alamofire
 struct NetworkError: Error {
     let initialError: AFError
-    let backendError: BackendError
+    let backendError: BackendError?
 
 }
 struct BackendError: Codable, Error {
