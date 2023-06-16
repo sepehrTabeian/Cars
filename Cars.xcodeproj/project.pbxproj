@@ -11,6 +11,14 @@
 		FE11F05C2A3BB17F00A61B62 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11F05B2A3BB17F00A61B62 /* ContentView.swift */; };
 		FE11F05E2A3BB18100A61B62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE11F05D2A3BB18100A61B62 /* Assets.xcassets */; };
 		FE11F0622A3BB18100A61B62 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE11F0612A3BB18100A61B62 /* Preview Assets.xcassets */; };
+		FE11F06F2A3C734A00A61B62 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FE11F06E2A3C734A00A61B62 /* Alamofire */; };
+		FE11F0722A3C782000A61B62 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11F0712A3C782000A61B62 /* Color.swift */; };
+		FE11F0752A3C79F700A61B62 /* CarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11F0742A3C79F700A61B62 /* CarList.swift */; };
+		FE11F0772A3C7A2800A61B62 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11F0762A3C7A2800A61B62 /* Car.swift */; };
+		FE11F0792A3C7A5500A61B62 /* ElectricalEngineDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11F0782A3C7A5500A61B62 /* ElectricalEngineDto.swift */; };
+		FE11F07B2A3C7AD300A61B62 /* MechanicalEngineDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11F07A2A3C7AD300A61B62 /* MechanicalEngineDto.swift */; };
+		FE11F07D2A3C7AEE00A61B62 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11F07C2A3C7AEE00A61B62 /* Engine.swift */; };
+		FE11F07F2A3C7B2C00A61B62 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11F07E2A3C7B2C00A61B62 /* Pagination.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +28,13 @@
 		FE11F05D2A3BB18100A61B62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE11F05F2A3BB18100A61B62 /* Cars.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cars.entitlements; sourceTree = "<group>"; };
 		FE11F0612A3BB18100A61B62 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FE11F0712A3C782000A61B62 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		FE11F0742A3C79F700A61B62 /* CarList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarList.swift; sourceTree = "<group>"; };
+		FE11F0762A3C7A2800A61B62 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		FE11F0782A3C7A5500A61B62 /* ElectricalEngineDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalEngineDto.swift; sourceTree = "<group>"; };
+		FE11F07A2A3C7AD300A61B62 /* MechanicalEngineDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MechanicalEngineDto.swift; sourceTree = "<group>"; };
+		FE11F07C2A3C7AEE00A61B62 /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
+		FE11F07E2A3C7B2C00A61B62 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE11F06F2A3C734A00A61B62 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +68,11 @@
 		FE11F0582A3BB17F00A61B62 /* Cars */ = {
 			isa = PBXGroup;
 			children = (
+				FE11F0702A3C73FA00A61B62 /* Utils */,
+				FE11F06A2A3C720300A61B62 /* Presentation */,
+				FE11F0692A3C71F000A61B62 /* ViewModels */,
+				FE11F0682A3C71E100A61B62 /* Data */,
 				FE11F0592A3BB17F00A61B62 /* CarsApp.swift */,
-				FE11F05B2A3BB17F00A61B62 /* ContentView.swift */,
 				FE11F05D2A3BB18100A61B62 /* Assets.xcassets */,
 				FE11F05F2A3BB18100A61B62 /* Cars.entitlements */,
 				FE11F0602A3BB18100A61B62 /* Preview Content */,
@@ -67,6 +86,50 @@
 				FE11F0612A3BB18100A61B62 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FE11F0682A3C71E100A61B62 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FE11F0732A3C79B500A61B62 /* Models */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FE11F0692A3C71F000A61B62 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FE11F06A2A3C720300A61B62 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FE11F05B2A3BB17F00A61B62 /* ContentView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		FE11F0702A3C73FA00A61B62 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FE11F0712A3C782000A61B62 /* Color.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FE11F0732A3C79B500A61B62 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FE11F0742A3C79F700A61B62 /* CarList.swift */,
+				FE11F0762A3C7A2800A61B62 /* Car.swift */,
+				FE11F0782A3C7A5500A61B62 /* ElectricalEngineDto.swift */,
+				FE11F07A2A3C7AD300A61B62 /* MechanicalEngineDto.swift */,
+				FE11F07C2A3C7AEE00A61B62 /* Engine.swift */,
+				FE11F07E2A3C7B2C00A61B62 /* Pagination.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +148,9 @@
 			dependencies = (
 			);
 			name = Cars;
+			packageProductDependencies = (
+				FE11F06E2A3C734A00A61B62 /* Alamofire */,
+			);
 			productName = Cars;
 			productReference = FE11F0562A3BB17F00A61B62 /* Cars.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +179,9 @@
 				Base,
 			);
 			mainGroup = FE11F04D2A3BB17F00A61B62;
+			packageReferences = (
+				FE11F06D2A3C734A00A61B62 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = FE11F0572A3BB17F00A61B62 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,7 +208,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE11F0752A3C79F700A61B62 /* CarList.swift in Sources */,
+				FE11F0772A3C7A2800A61B62 /* Car.swift in Sources */,
+				FE11F0722A3C782000A61B62 /* Color.swift in Sources */,
+				FE11F0792A3C7A5500A61B62 /* ElectricalEngineDto.swift in Sources */,
 				FE11F05C2A3BB17F00A61B62 /* ContentView.swift in Sources */,
+				FE11F07B2A3C7AD300A61B62 /* MechanicalEngineDto.swift in Sources */,
+				FE11F07F2A3C7B2C00A61B62 /* Pagination.swift in Sources */,
+				FE11F07D2A3C7AEE00A61B62 /* Engine.swift in Sources */,
 				FE11F05A2A3BB17F00A61B62 /* CarsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +426,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FE11F06D2A3C734A00A61B62 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FE11F06E2A3C734A00A61B62 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE11F06D2A3C734A00A61B62 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FE11F04E2A3BB17F00A61B62 /* Project object */;
 }
