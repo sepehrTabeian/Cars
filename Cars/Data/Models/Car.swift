@@ -5,7 +5,7 @@
 //  Created by Sepehr on 6/16/23.
 //
 
-struct Car: Codable {
+public struct Car: Codable {
     let id : String
     let make: String
     let model: String

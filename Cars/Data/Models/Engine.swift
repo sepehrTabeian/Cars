@@ -5,11 +5,14 @@
 //  Created by Sepehr on 6/16/23.
 //
 
-struct Engine: Codable {
+public struct Engine: Codable {
     let electricalEngine: ElectricalEngineDto?
     let mechanicalEngine: MechanicalEngineDto?
-    
-    init(from decoder: Decoder) throws {
+   public init(electricalEngine: ElectricalEngineDto?, mechanicalEngine: MechanicalEngineDto?) {
+        self.electricalEngine = electricalEngine
+        self.mechanicalEngine = mechanicalEngine
+    }
+    public init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         
         if let electricalEngine = try? container.decode(ElectricalEngineDto.self) {
@@ -23,7 +26,7 @@ struct Engine: Codable {
         }
     }
     
-    func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
         if let electricalEngine = electricalEngine {
             try container.encode(electricalEngine)
